@@ -1,1 +1,285 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Name - Personal Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal website for Your Name" />
+
+  <style>
+    /* --- Basic reset --- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      color: #222;
+      background-color: #f7f7f7;
+    }
+
+    a {
+      color: #0059b3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Layout --- */
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      background-color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 1rem;
+    }
+
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .site-title {
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+    }
+
+    main {
+      margin-top: 1.5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .affiliation {
+      font-size: 0.95rem;
+      color: #666;
+      margin-top: 0.25rem;
+    }
+
+    .social-links {
+      margin-top: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .social-links span {
+      color: #999;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+
+    .list-compact li {
+      margin-bottom: 0.15rem;
+    }
+
+    .item-meta {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .small {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e0e0e0;
+      font-size: 0.85rem;
+      color: #888;
+      text-align: right;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 1.5rem 1rem 2rem;
+      }
+
+      .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <nav class="top-nav">
+        <div class="site-title">Your Name</div>
+        <div class="nav-links">
+          <a href="#about">Home</a>
+          <a href="#research">Research</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <!-- Add/remove links as needed -->
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About / Intro -->
+      <section id="about">
+        <h1>Your Name</h1>
+        <div class="subtitle">Your Title (e.g., Research Scientist / Developer / Student)</div>
+        <div class="affiliation">Your Affiliation or Location</div>
+
+        <div class="social-links">
+          <!-- Replace # with your real links or remove what you don't need -->
+          <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+          <span>•</span>
+          <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
+          <span>•</span>
+          <a href="mailto:you@example.com">Email</a>
+          <!-- Add more: Google Scholar, Bluesky, Mastodon, etc. -->
+        </div>
+
+        <h2>Hi!</h2>
+        <p>
+          I am <strong>Your Name</strong>, a <em>short description of who you are</em> —
+          for example, “a data scientist interested in visualization, machine learning,
+          and building tools that help people understand complex systems.”
+        </p>
+        <p>
+          On this page, you can find a brief overview of my research/interests, work experience,
+          and education. Feel free to reach out if you’d like to collaborate or chat.
+        </p>
+      </section>
+
+      <!-- Research / Interests -->
+      <section id="research">
+        <h2>Research / Interests</h2>
+        <ul>
+          <li>Area or interest #1 (e.g., Data Visualization)</li>
+          <li>Area or interest #2 (e.g., Machine Learning)</li>
+          <li>Area or interest #3 (e.g., Human–AI Interaction)</li>
+          <li>Area or interest #4 (e.g., Audio / Music Informatics)</li>
+        </ul>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience">
+        <h2>Professional Experience</h2>
+
+        <h3>Role Title, Company</h3>
+        <div class="item-meta">City, State · 20XX – Present</div>
+        <p class="small">
+          One or two sentences about what you work on. For example, “I design and build
+          interactive systems for exploring complex datasets, focusing on usability
+          and reproducibility.”
+        </p>
+
+        <h3>Past Role, Previous Organization</h3>
+        <div class="item-meta">City, State · 20XX – 20YY</div>
+        <p class="small">
+          Brief description of your responsibilities or projects. Keep this concise.
+        </p>
+      </section>
+
+      <!-- Education -->
+      <section id="education">
+        <h2>Education</h2>
+        <ul class="list-compact">
+          <li>
+            <strong>Ph.D. in Something</strong>, University Name, 20XX
+          </li>
+          <li>
+            <strong>M.S. in Something</strong>, University Name, 20XX
+          </li>
+          <li>
+            <strong>B.S. in Something</strong>, University Name, 20XX
+          </li>
+        </ul>
+      </section>
+
+      <!-- Optional: Publications / Projects -->
+      <section id="publications">
+        <h2>Selected Publications / Projects</h2>
+        <ul>
+          <li>
+            <strong>Title of a Paper or Project</strong><br />
+            <span class="small">
+              Your Name, Coauthor, Another Coauthor. Venue / Year.
+              <a href="#">[PDF]</a> <a href="#">[Code]</a>
+            </span>
+          </li>
+          <li>
+            <strong>Another Cool Thing</strong><br />
+            <span class="small">
+              Short description or a link:
+              <a href="#">https://example.com</a>
+            </span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      &copy; <span id="year"></span> Your Name
+    </footer>
+  </div>
+
+  <script>
+    // Auto-fill the current year in the footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
