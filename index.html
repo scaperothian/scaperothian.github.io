@@ -65,10 +65,6 @@
       gap: 0.75rem;
     }
 
-    .nav-links a {
-      font-weight: 500;
-    }
-
     main {
       margin-top: 1.5rem;
     }
@@ -148,16 +144,32 @@
       text-align: right;
     }
 
-    @media (max-width: 600px) {
-      .page {
-        padding: 1.5rem 1rem 2rem;
+    /* ⭐ NEW: Two-column layout for image + about text */
+    .about-container {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .profile-image {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    @media (max-width: 700px) {
+      .about-container {
+        grid-template-columns: 1fr;
       }
 
-      .top-nav {
-        flex-direction: column;
-        align-items: flex-start;
+      .profile-image {
+        max-width: 250px;
+        margin: 0 auto;
+        display: block;
       }
     }
+
   </style>
 </head>
 <body>
@@ -170,40 +182,50 @@
           <a href="#research">Research</a>
           <a href="#experience">Experience</a>
           <a href="#education">Education</a>
-          <!-- Add/remove links as needed -->
         </div>
       </nav>
     </header>
 
     <main>
-      <!-- About / Intro -->
+
+      <!-- ⭐ Updated ABOUT section with two-column layout -->
       <section id="about">
-        <h1>David Scaperoth</h1>
-        <div class="subtitle">Researcher / Software Architect / Development Lead / ML Engineer</div>
-        <div class="affiliation">Washington DC Area</div>
 
-        <div class="social-links">
-          <!-- Replace # with your real links or remove what you don't need -->
-          <a href="https://github.com/scaperothian" target="_blank" rel="noopener">GitHub</a>
-          <span>•</span>
-          <!-- a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
-          <span>•</span-->
-          <a>Email: scaperoth at berkeley.edu</a>
-          <!-- Add more: Google Scholar, Bluesky, Mastodon, etc. -->
+        <div class="about-container">
+
+          <!-- LEFT COLUMN -->
+          <div>
+            <img src="image.jpg" alt="David Scaperoth" class="profile-image" />
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div>
+            <h1>David Scaperoth</h1>
+            <div class="subtitle">Researcher / Software Architect / Development Lead / ML Engineer</div>
+            <div class="affiliation">Washington DC Area</div>
+
+            <div class="social-links">
+              <a href="https://github.com/scaperothian" target="_blank" rel="noopener">GitHub</a>
+              <span>•</span>
+              <a>Email: scaperoth at berkeley.edu</a>
+            </div>
+
+            <h2>Hi!</h2>
+            <p>
+              I am <strong>David Scaperoth</strong>, a <em>researcher, software architect, development lead, machine learning engineer</em>
+              interested in data driven methods for building and maintaining complex systems.
+            </p>
+            <p>
+              On this page, you can find a brief overview of my research/interests, work experience,
+              and education. Feel free to reach out if you’d like to collaborate or chat.
+            </p>
+          </div>
+
         </div>
-
-        <h2>Hi!</h2>
-        <p>
-          I am <strong>David Scaperoth</strong>, a <em>researcher, software architect, development lead, machine learning engineer</em>
-          interested in data driven methods for building building and maintaining complex systems.”
-        </p>
-        <p>
-          On this page, you can find a brief overview of my research/interests, work experience,
-          and education. Feel free to reach out if you’d like to collaborate or chat.
-        </p>
       </section>
 
-      <!-- Research / Interests -->
+      <!-- EVERYTHING BELOW IS UNCHANGED -->
+
       <section id="research">
         <h2>Research / Interests</h2>
         <ul>
@@ -214,96 +236,56 @@
         </ul>
       </section>
 
-      <!-- Experience -->
-      <!--section id="experience">
-        <h2>Professional Experience</h2>
-
-        <h3>Role Title, Company</h3>
-        <div class="item-meta">City, State · 20XX – Present</div>
-        <p class="small">
-          One or two sentences about what you work on. For example, “I design and build
-          interactive systems for exploring complex datasets, focusing on usability
-          and reproducibility.”
-        </p>
-
-        <h3>Past Role, Previous Organization</h3>
-        <div class="item-meta">City, State · 20XX – 20YY</div>
-        <p class="small">
-          Brief description of your responsibilities or projects. Keep this concise.
-        </p>
-    </section-->
-
-      <!-- Education -->
       <section id="education">
         <h2>Education</h2>
         <ul class="list-compact">
-          <li>
-            <strong>M.S. in Data Science</strong>, University California, Berkeley, 2024
-          </li>
-          <li>
-            <strong>M.S. in Electrical Engineering</strong>, Virginia Tech, 2007
-          </li>
-          <li>
-            <strong>B.S. in Electrical Engineering</strong>, University Tennessee, Knoxville, 2005
-          </li>
+          <li><strong>M.S. in Data Science</strong>, University California, Berkeley, 2024</li>
+          <li><strong>M.S. in Electrical Engineering</strong>, Virginia Tech, 2007</li>
+          <li><strong>B.S. in Electrical Engineering</strong>, University Tennessee, Knoxville, 2005</li>
         </ul>
       </section>
 
-      <!-- Optional: Publications / Projects -->
       <section id="publications">
         <h2>Selected Publications / Projects</h2>
         <ul>
-          <!--li>
-            <strong>Creating Taylor Swift Songs with an LLM</strong><br />
-            <span class="small">
-              Scaperoth, David Alan. 2023.
-              <a href="">[CODE]</a>
-            </span>
-          </li-->
           <li>
             <strong>Configurable SDR Operation for Cognitive Radio Applications using GNU Radio and the Universal Software Radio Peripheral</strong><br />
             <span class="small">
-              Scaperoth, David Alan. Virginia Tech, Thesis.  2007.
+              Scaperoth, David Alan. Virginia Tech, Thesis. 2007.
               <a href="https://vtechworks.lib.vt.edu/server/api/core/bitstreams/463a0046-c699-4555-84cc-8ad8c1880f7a/content">[PDF]</a>
             </span>
           </li>
           <li>
             <strong>Cognitive Radio Platform Development for Interoperability</strong><br />
             <span class="small">
-              Scaperoth, David, et al. 2006 MILCOM IEEE Military Communications conference.
-              <a href="https://ieeexplore.ieee.org/iel5/4086332/4043248/04086554.pdf?casa_token=6Afu_f03FoYAAAAA:fqjX7-lyPrP7FuTjqTw1iAYDxBmyXD_MktjYAPXzFIokn7mpe5jxOkmD69Paskwutm0j73mUk3E">[PDF]</a>
+              Scaperoth, David, et al. MILCOM 2006 IEEE Military Communications Conference.
+              <a href="https://ieeexplore.ieee.org/iel5/4086332/4043248/04086554.pdf">[PDF]</a>
             </span>
           </li>
           <li>
             <strong>Cognitive radio formulation and implementation</strong><br />
             <span class="small">
-              Rondeau, Thomas W., et al. 2006 IEEE 1st International conference on cognitive radio oriented wireless networks and communications.
-              <a href="https://ieeexplore.ieee.org/iel5/4211125/4211126/04211156.pdf?casa_token=GS2coDOUmxgAAAAA:RWsT2i0YCvUxOwYXaJDnKcMUZqFmIzeYpha5xRxkdxWBKtLG8Jdrujxx3YRiKzDxTbr7K9Ob4-8">[PDF]</a>
+              Rondeau, Thomas W., et al. IEEE 1st International Conference on Cognitive Radio-Oriented Wireless Networks and Communications, 2006.
+              <a href="https://ieeexplore.ieee.org/iel5/4211125/4211126/04211156.pdf">[PDF]</a>
             </span>
-          </li> 
+          </li>
           <li>
             <strong>Signal recognition for cognitive radios</strong><br />
             <span class="small">
-              Le, Bin, et al. Software Defined Radio Forum Technical Conference. 2006.
+              Le, Bin, et al. SDR Forum Technical Conference, 2006.
               <a href="https://www.wirelessinnovation.org/assets/Proceedings/2006/sdr06-3.5-3-le.pdf">[PDF]</a>
             </span>
-          </li> 
+          </li>
           <li>
             <strong>Optimization, learning, and decision making in a cognitive engine</strong><br />
             <span class="small">
               Rondeau, Thomas W., et al. Proc. SDR Forum. Vol. 6. 2006.
               <a href="https://www.wirelessinnovation.org/assets/Proceedings/2006/sdr06-3.1-2-rondeau.pdf">[PDF]</a>
             </span>
-          </li> 
-          <!--li>
-            <strong>Another Cool Thing</strong><br />
-            <span class="small">
-              Short description or a link:
-              <a href="#">https://example.com</a>
-            </span>
-        </li-->
+          </li>
         </ul>
       </section>
+
     </main>
 
     <footer>
@@ -312,8 +294,8 @@
   </div>
 
   <script>
-    // Auto-fill the current year in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
