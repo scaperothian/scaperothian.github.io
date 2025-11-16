@@ -144,7 +144,7 @@
       text-align: right;
     }
 
-    /* ⭐ NEW: Two-column layout for image + about text */
+    /* ⭐ Two-column layout for image + about text */
     .about-container {
       display: grid;
       grid-template-columns: 220px 1fr;
@@ -152,10 +152,14 @@
       align-items: start;
     }
 
+    /* ⭐ Circular profile image */
     .profile-image {
-      width: 100%;
-      border-radius: 10px;
-      border: 1px solid #ddd;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 2px solid #ddd;
     }
 
     @media (max-width: 700px) {
@@ -164,9 +168,7 @@
       }
 
       .profile-image {
-        max-width: 250px;
         margin: 0 auto;
-        display: block;
       }
     }
 
@@ -180,7 +182,7 @@
         <div class="nav-links">
           <a href="#about">Home</a>
           <a href="#research">Research</a>
-          <!--a href="#experience">Experience</a-->
+          <a href="#experience">Experience</a>
           <a href="#education">Education</a>
         </div>
       </nav>
@@ -190,7 +192,6 @@
 
       <!-- ⭐ Updated ABOUT section with two-column layout -->
       <section id="about">
-
         <div class="about-container">
 
           <!-- LEFT COLUMN -->
@@ -209,23 +210,12 @@
               <span>•</span>
               <a>Email: scaperoth at berkeley.edu</a>
             </div>
-
-            <!--h2>Hi!</h2>
-            <p>
-              I am <strong>David Scaperoth</strong>, a <em>researcher, software architect, development lead, machine learning engineer</em>
-              interested in data driven methods for building and maintaining complex systems.
-            </p>
-            <p>
-              On this page, you can find a brief overview of my research/interests, work experience,
-              and education. Feel free to reach out if you’d like to collaborate or chat.
-            </p-->
           </div>
 
         </div>
       </section>
 
-      <!-- EVERYTHING BELOW IS UNCHANGED -->
-
+      <!-- EVERYTHING ELSE UNCHANGED -->
       <section id="research">
         <h2>Research / Interests</h2>
         <ul>
@@ -289,7 +279,7 @@
     </main>
 
     <footer>
-      &copy; <span id="year"></span> scaperothian
+      &copy; <span id="year"></span> Your Name
     </footer>
   </div>
 
